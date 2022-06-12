@@ -29,3 +29,6 @@ pip install pandas numpy plotly matplotlib notebook scikit-learn pydotplus
 conda install pandas numpy plotly matplotlib notebook scikit-learn pydotplus
 ```
 ---
+## Dataset:
+The dataset used in the implementation is the Iris dataset (See Table 3.1 and Fig. 3.1) with four attributes, `sepal length`, `sepal width`, `petal length`, and `petal width` and a Species label to identify the species of flower, viz., `Iris setosa`, `Iris versicolor`, and `Iris virginica`.
+---
