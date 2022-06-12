@@ -14,7 +14,7 @@ Decision Trees (DTs) are a non-parametric supervised learning method used for cl
 
 - The cost of using the tree (i.e., predicting data) is logarithmic in the number of data points used to train the tree.
 
-- Able to handle both numerical and categorical data. However scikit-learn implementation does not support categorical variables for now. Other techniques are usually specialized in analyzing datasets that have only one type of variable. See algorithms for more information.
+- Able to handle both numerical and categorical data.
   
 - Able to handle multi-output problems.
 
