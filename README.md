@@ -4,3 +4,5 @@
 #### Author: Kunwardeep Singh Jagdev
  
 ---
+## Project Goals: 
+- Create a classifier which is able to predict the right class of the any new data fed to it.
