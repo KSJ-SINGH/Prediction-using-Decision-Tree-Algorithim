@@ -2,7 +2,29 @@
 
 ## Task 6: Prediction using Decision Tree Algorithim
 #### Author: Kunwardeep Singh Jagdev
- 
+---
+## Description:
+Decision Trees (DTs) are a non-parametric supervised learning method used for classification and regression. The goal is to create a model that predicts the value of a target variable by learning simple decision rules inferred from the data features. A tree can be seen as a piecewise constant approximation.
+
+##### Some advantages of decision trees are:
+
+- Simple to understand and to interpret. Trees can be visualized.
+
+- Requires little data preparation. Other techniques often require data normalization, dummy variables need to be created and blank values to be removed. Note however that this module does not support missing values.
+
+- The cost of using the tree (i.e., predicting data) is logarithmic in the number of data points used to train the tree.
+
+- Able to handle both numerical and categorical data. However scikit-learn implementation does not support categorical variables for now. Other techniques are usually specialized in analyzing datasets that have only one type of variable. See algorithms for more information.
+  
+- Able to handle multi-output problems.
+
+##### The disadvantages of decision trees include:
+
+- Decision-tree learners can create over-complex trees that do not generalize the data well. This is called overfitting. Mechanisms such as pruning, setting the minimum number of samples required at a leaf node or setting the maximum depth of the tree are necessary to avoid this problem.
+
+- Decision trees can be unstable because small variations in the data might result in a completely different tree being generated. This problem is mitigated by using decision trees within an ensemble.
+
+- Predictions of decision trees are neither smooth nor continuous, but piecewise constant
 ---
 ## Project Goals: 
 - Create a classifier which is able to predict the right class of the any new data fed to it.
