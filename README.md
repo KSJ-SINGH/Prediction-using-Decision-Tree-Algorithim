@@ -53,4 +53,46 @@ conda install pandas numpy plotly matplotlib notebook scikit-learn pydotplus
 ---
 ## Dataset:
 The dataset used in the implementation is the Iris dataset (See Table 3.1 and Fig. 3.1) with four attributes, `sepal length`, `sepal width`, `petal length`, and `petal width` and a Species label to identify the species of flower, viz., `Iris setosa`, `Iris versicolor`, and `Iris virginica`.
+
 ---
+## Procedure and Result:
+
+- Step 1:
+  First of all, we import the necessary library, import the dataset and slice the important features
+```python
+# Importing the necessary libraries
+import pandas as pd
+import numpy as np
+import sklearn.datasets as datasets
+from six import StringIO  
+from IPython.display import Image  
+from sklearn.tree import export_graphviz
+import pydotplus
+
+# Importing the dataset and slicing important features
+iris=datasets.load_iris()
+
+## Forming the iris dataframe
+iris_df=pd.DataFrame(iris.data, columns=iris.feature_names)
+y=iris.target
+```
+- Step 2:
+  Now we define the Decision Tree Algorithim using the ```DecisionTreeClassifier``` class from ```sklearn.tree``` module.
+```python
+from sklearn.tree import DecisionTreeClassifier
+decision_tree = DecisionTreeClassifier()
+decision_tree.fit(iris_df, y)
+print('Decision Tree Classifer Created')
+```
+- Step 3:
+  Now we visualize the decision tree
+```python
+dot_data = StringIO()
+export_graphviz(decision_tree, out_file=dot_data, feature_names=iris.feature_names,  
+                filled=True, rounded=True,
+                special_characters=True)
+graph = pydotplus.graph_from_dot_data(dot_data.getvalue())  
+Image(graph.create_png())
+```
+> ##### The below mentioned graph is obtained as output:
+![image](./images/output.png)
